@@ -5,6 +5,7 @@ export interface IUser extends Document {
   email: string;
   password: string;
   phone: string;
+  address?: string;
   role: "user" | "rider";
   ambulanceName?: string;
   ambulanceNumber?: string;
@@ -23,6 +24,7 @@ const userSchema: Schema = new Schema<IUser>(
     ambulanceNumber: { type: String },
     hasMedicalTraining: { type: Boolean },
     imageUrl: { type: String },
+    address: { type: String },
   },
   {
     timestamps: true,

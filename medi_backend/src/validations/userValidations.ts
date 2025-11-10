@@ -10,4 +10,5 @@ export const registerSchema = Joi.object({
   ambulanceNumber: Joi.string().when("role", { is: "rider", then: Joi.required() }),
   hasMedicalTraining: Joi.boolean(),
   imageUrl: Joi.string().uri().optional(),
-})
+  address: Joi.string().required(),
+});
